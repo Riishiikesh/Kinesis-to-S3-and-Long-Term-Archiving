@@ -28,7 +28,7 @@ The pipeline works as follows:
 
 ## 🏗️ Architecture
 
-![Architecture Diagram](images/kinesis_s3_architecture.png)
+![Architecture Diagram](Kinesis_S3.png)
 
 > 💡 Replace the above image with your exported `.png` from `Kinesis_S3.drawio`.
 
