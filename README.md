@@ -30,9 +30,6 @@ The pipeline works as follows:
 
 ![Architecture Diagram](Kinesis_S3.png)
 
-> 💡 Replace the above image with your exported `.png` from `Kinesis_S3.drawio`.
-
----
 
 ## 🛠️ AWS Services Used
 | Service                        | Role in Project |
