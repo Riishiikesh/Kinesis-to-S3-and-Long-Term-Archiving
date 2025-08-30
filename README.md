@@ -97,15 +97,20 @@ python data_producer.py
 Sample event generated:
 ```json
 {
-  "event_id": "b8f9e7b2-28a1-4e0b-9f22-12345",
-  "timestamp": "2025-08-24T12:15:32.456Z",
-  "event_type": "click",
-  "user_id": "ad92-3f4b...",
-  "page_url": "http://example.com/home",
-  "browser": "Chrome",
-  "device_type": "mobile",
-  "country": "US"
-}
+        'event_id': fake.uuid4(),
+        'timestamp': datetime.utcnow().isoformat(),
+        'event_type': random.choice(event_types),
+        'user_id': fake.uuid4(),
+        'session_id': fake.uuid4(),
+        'page_url': fake.url(),
+        'user_agent': fake.user_agent(),
+        'ip_address': fake.ipv4(),
+        'country': fake.country_code(),
+        'device_type': random.choice(['desktop', 'mobile', 'tablet']),
+        'browser': random.choice(['Chrome', 'Firefox', 'Safari', 'Edge']),
+        'referrer': fake.url() if random.random() > 0.3 else None,
+        'value': round(random.uniform(0, 1000), 2) if random.random() > 0.7 else None
+    }
 ```
 
 ---
